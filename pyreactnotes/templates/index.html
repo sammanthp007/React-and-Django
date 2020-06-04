@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Ponynote</title>
+</head>
+
+<body>
+    <!--
+    The HTML division with root id is the mounting point of our react
+    application. The render_bundle tag with main as argument renders script tag
+    for bundle named main which is produced by our webpack config.
+    -->
+    {% load render_bundle from webpack_loader %}
+
+    <div id="root">
+    </div>
+    {% render_bundle 'main' %}
+</body>
+</html>
